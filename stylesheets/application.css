@@ -2336,6 +2336,7 @@ html.dark-mode input[type=password],
 html.dark-mode input[type=number],
 html.dark-mode input[type=search],
 html.dark-mode input[type=url],
+html.dark-mode input[type=date],
 html.dark-mode select,
 html.dark-mode textarea { background: var(--c-surface-2) !important; color: var(--c-text) !important; border-color: var(--c-border) !important; }
 
