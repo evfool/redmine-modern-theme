@@ -2355,6 +2355,22 @@ html.dark-mode .check_box_group { background: var(--c-surface-2) !important; col
 html.dark-mode #query_form { background: var(--c-surface) !important; border-color: var(--c-border) !important; }
 html.dark-mode #filters-table { background: transparent !important; color: var(--c-text) !important; }
 
+/* Core hardcodes legend text and every sprite_icon() SVG's stroke to fixed dark grays
+   (--oc-gray-9/--oc-gray-8) meant for light backgrounds only - illegible in dark mode. Most
+   visible on the "Filters"/"Options" collapsible fieldset headers, but the selectors are fully
+   generic (every <legend>, every icon-svg site-wide), so fix both broadly rather than just those
+   two fieldsets. Reuses --c-text-muted for both text and icon, matching this file's own
+   established pattern for this exact class of bug (see .tabular label, h4.journal-header,
+   table.list th above) - more specific icon-color rules elsewhere (a.icon-only, a.icon.new-issue,
+   and this project's own status_button icon colors) all have higher selector specificity and
+   keep winning over this low-specificity default. */
+html.dark-mode legend {
+  color: var(--c-text-muted) !important;
+}
+html.dark-mode svg.icon-svg {
+  stroke: var(--c-text-muted) !important;
+}
+
 /* Dropdowns / context menu */
 html.dark-mode .drdn-content {
   background: var(--c-surface) !important;
