@@ -2795,6 +2795,9 @@ html.dark-mode #activity h3 {
 #activity dt .gravatar {
   margin-inline-end: 6px !important;
   order: -1;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  object-fit: cover !important;
 }
 
 /* Icon keeps pace with the avatar's new margin, now that it's visually second */
