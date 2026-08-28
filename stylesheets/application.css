@@ -2785,6 +2785,20 @@ html.dark-mode #activity h3 {
   color: var(--c-text) !important;
 }
 
+/* ── Activity page avatar spacing — Redmine 7 core CSS gap, not dark-mode specific ──
+   #activity dt is a flex row (icon, avatar, time, title...); .avatar/.gravatar (the latter
+   from redmine_local_avatars' avatar_with_local override, which skips core's "avatar" class
+   entirely) get no margin at all, sitting flush against their neighbors on both sides. */
+#activity dt .avatar,
+#activity dt .gravatar {
+  margin-inline: 8px !important;
+}
+
+/* ── Activity page timestamp color — lighter than core default (oc-gray-7), dark mode only ── */
+html.dark-mode #activity dt .time {
+  color: var(--oc-gray-5) !important;
+}
+
 /* ── Sidebar clear-query icon — ensure SVG renders ── */
 a.icon-clear-query .icon-svg { display: block !important; }
 a.icon-clear-query .icon-label { display: none !important; }
