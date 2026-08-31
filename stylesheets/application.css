@@ -2575,6 +2575,16 @@ body > .ui-dialog,
   z-index: 10051 !important;
 }
 
+/* Right-click context menu (issue list, gantt, calendar) — Redmine core ships #context-menu
+   with z-index: 40 (app/assets/stylesheets/context_menu.css), far below this theme's fixed
+   topbar/header chrome (999-1061 above). Right-clicking a row near the top of a list opened
+   the menu behind #header/#top-menu, hiding its top items - raise it clear of all fixed chrome,
+   same reasoning as the dialog/overlay block above, but below the 9998-10051 toast/dialog range
+   so it still yields to an actual open modal if one's somehow already on screen. */
+#context-menu {
+  z-index: 2000 !important;
+}
+
 /* Watcher user list */
 #users_for_watcher {
   border: 1px solid var(--c-border) !important;
