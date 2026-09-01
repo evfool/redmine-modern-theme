@@ -1150,8 +1150,8 @@ table.list tr.group td {
 .issue.details:hover { box-shadow: var(--shadow-sm) !important; }
 
 .issue.details .subject {
-  font-size: var(--text-xl) !important;
-  font-weight: 700 !important;
+  /* font-size: var(--text-sm) !important; */
+  /* font-weight: 300 !important; */
   color: var(--c-text) !important;
   /* margin-bottom: var(--sp-3) !important; */
   line-height: 1.4 !important;
