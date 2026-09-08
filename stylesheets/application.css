@@ -1483,7 +1483,6 @@ select {
 }
 
 textarea {
-  height: auto !important;
   min-height: 80px !important;
   resize: vertical !important;
 }
